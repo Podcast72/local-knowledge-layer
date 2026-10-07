@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="590" viewBox="0 0 1440 590" role="img" aria-labelledby="title desc">
+  <title id="title">Local Knowledge Layer architecture</title>
+  <desc id="desc">Locally available documents flow through extraction and chunking, Google EmbeddingGemma, a local vector index, and an MCP read-only adapter to the personal maclocal plugin in Work. Future image, video, and audio sources need additional ingestion such as OCR, transcription, or multimodal embeddings before joining the index.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0b1222"/><stop offset="1" stop-color="#101f36"/></linearGradient>
+    <linearGradient id="accent" x2="1"><stop stop-color="#5de0c1"/><stop offset="1" stop-color="#76a8ff"/></linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#76a8ff"/></marker>
+    <style>
+      .title{font:700 30px system-ui,-apple-system,Segoe UI,sans-serif;fill:#f4f7ff}.sub{font:16px system-ui,-apple-system,Segoe UI,sans-serif;fill:#a9bad4}.label{font:700 17px system-ui,-apple-system,Segoe UI,sans-serif;fill:#f4f7ff}.small{font:14px system-ui,-apple-system,Segoe UI,sans-serif;fill:#a9bad4}.tag{font:700 12px system-ui,-apple-system,Segoe UI,sans-serif;letter-spacing:1.6px;fill:#5de0c1}.node{fill:#172a43;stroke:#36546f;stroke-width:1.5}.line{fill:none;stroke:#76a8ff;stroke-width:2.5;marker-end:url(#arrow)}.future{fill:#172235;stroke:#60718b;stroke-width:1.5;stroke-dasharray:7 6}
+    </style>
+  </defs>
+  <rect width="1440" height="590" rx="24" fill="url(#bg)"/>
+  <rect x="40" y="38" width="6" height="48" rx="3" fill="url(#accent)"/>
+  <text x="64" y="69" class="title">Your files become searchable memory for AI.</text>
+  <text x="64" y="98" class="sub">Local text pipeline · relevant excerpts cross the MCP boundary only when requested</text>
+  <text x="48" y="158" class="tag">AVAILABLE NOW</text>
+  <g class="node"><rect x="48" y="180" width="198" height="132" rx="18"/><rect x="278" y="180" width="198" height="132" rx="18"/><rect x="508" y="180" width="198" height="132" rx="18"/><rect x="738" y="180" width="198" height="132" rx="18"/><rect x="968" y="180" width="198" height="132" rx="18"/><rect x="1198" y="180" width="194" height="132" rx="18"/></g>
+  <path d="M246 246h28M476 246h28M706 246h28M936 246h28M1166 246h28" class="line"/>
+  <text x="68" y="216" class="label">Sources</text><text x="68" y="244" class="small">Local documents</text><text x="68" y="265" class="small">Synced local folders*</text><text x="68" y="286" class="small">PDF · Office · iWork</text>
+  <text x="298" y="216" class="label">Extraction</text><text x="298" y="244" class="small">Read text</text><text x="298" y="265" class="small">Normalize · chunk</text><text x="298" y="286" class="small">Source files untouched</text>
+  <text x="528" y="216" class="label">EmbeddingGemma</text><text x="528" y="244" class="small">Google text encoder</text><text x="528" y="265" class="small">Local embeddings</text><text x="528" y="286" class="small">Meaning → vectors</text>
+  <text x="758" y="216" class="label">Vector index</text><text x="758" y="244" class="small">SQLite · 256D vectors</text><text x="758" y="265" class="small">Similarity ranking</text><text x="758" y="286" class="small">Incremental updates</text>
+  <text x="988" y="216" class="label">MCP</text><text x="988" y="244" class="small">Read-only tools</text><text x="988" y="265" class="small">Search · nearby chunks</text><text x="988" y="286" class="small">Selected results only</text>
+  <text x="1218" y="216" class="label">maclocal plugin</text><text x="1218" y="244" class="small">Installed in Work</text><text x="1218" y="265" class="small">Ask naturally</text><text x="1218" y="286" class="small">Answer with context</text>
+  <text x="48" y="376" class="tag" fill="#a9bad4">FUTURE MEDIA PATH</text>
+  <rect x="48" y="396" width="428" height="118" rx="18" class="future"/><rect x="508" y="396" width="428" height="118" rx="18" class="future"/>
+  <path d="M476 455h28M936 455h148v-122" class="line" stroke-dasharray="7 6"/>
+  <text x="68" y="431" class="label">Images · video · audio</text><text x="68" y="458" class="small">Locally available media files</text><text x="68" y="481" class="small">Not indexed by the current text pipeline</text>
+  <text x="528" y="431" class="label">Modality-specific extraction</text><text x="528" y="458" class="small">OCR / visual embeddings for images &amp; frames</text><text x="528" y="481" class="small">Transcription for speech and audio</text>
+  <text x="48" y="551" class="small">* Synced files must exist on disk and be included in configured sources. Media path is planned, not enabled.</text>
+</svg>

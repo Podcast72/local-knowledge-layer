@@ -1,0 +1,11 @@
+# Starts with the synthetic example only. Replace or add absolute local paths
+# after reviewing the files and the privacy implications of indexing them.
+sources = ["sample_data"]
+max_file_mb = 10
+exclude_hidden = true
+exclude_files = ["AGENTS.md", "CLAUDE.md", "SOUL.md"]
+exclude_dirs = [
+  ".git", ".venv", "node_modules", "__pycache__", ".cache",
+  "dist", "build", "venv", "env", "site-packages", "vendor"
+]
+exclude_paths = []

@@ -1,0 +1,17 @@
+{
+  "name": "maclocal",
+  "version": "0.1.0",
+  "description": "Read-only semantic search over an index on this computer.",
+  "author": {"name": "Local Knowledge Layer contributors"},
+  "interface": {
+    "displayName": "maclocal",
+    "shortDescription": "Search local documents",
+    "longDescription": "Read-only search of a local knowledge index; returns relevant passages on request.",
+    "developerName": "Local Knowledge Layer contributors",
+    "category": "Productivity",
+    "capabilities": ["Read"],
+    "defaultPrompt": "Search my indexed local documents with maclocal and use the relevant results."
+  },
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

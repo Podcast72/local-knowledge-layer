@@ -1,0 +1,31 @@
+[project]
+name = "local-knowledge-layer"
+version = "0.1.0"
+description = "Local semantic knowledge layer with an MCP bridge for AI clients"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "torch==2.14.1",
+  "sentence-transformers",
+  "transformers",
+  "numpy",
+  "pypdf",
+  "pillow>=12.3.0",
+  "torchvision==0.29.1",
+  "python-docx>=1.2.0",
+  "openpyxl>=3.1.5",
+  "xlrd>=2.0.2",
+  "odfpy>=1.4.1",
+  "striprtf>=0.0.33",
+  "numbers-parser>=4.19.0",
+  "python-pages>=0.1.0",
+]
+
+[project.scripts]
+lkl = "local_knowledge_layer.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/local_knowledge_layer"]

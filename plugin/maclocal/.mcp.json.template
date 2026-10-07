@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "maclocal": {
+      "command": "__PYTHON_PATH__",
+      "args": ["__SERVER_PATH__"],
+      "cwd": "__PROJECT_ROOT__"
+    }
+  }
+}

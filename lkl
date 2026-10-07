@@ -1,0 +1,14 @@
+#!/bin/sh
+set -eu
+PROJECT_ROOT=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+export HF_HOME="$PROJECT_ROOT/models/huggingface"
+export HF_HUB_CACHE="$HF_HOME/hub"
+export HF_XET_CACHE="$HF_HOME/xet"
+export HF_ASSETS_CACHE="$HF_HOME/assets"
+export SENTENCE_TRANSFORMERS_HOME="$HF_HOME/hub"
+export XDG_CACHE_HOME="$PROJECT_ROOT/.cache"
+export TORCH_HOME="$PROJECT_ROOT/.cache/torch"
+export UV_CACHE_DIR="$PROJECT_ROOT/.uv-cache"
+export PYTHONDONTWRITEBYTECODE=1
+export HF_HUB_DISABLE_TELEMETRY=1
+exec "$PROJECT_ROOT/.venv/bin/python" -m local_knowledge_layer.cli "$@"
